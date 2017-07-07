@@ -30,7 +30,7 @@ root.on("dataRefreshed",function() {
 })
 function getdata(){
      pageNum=0;
-     var ye = pageNum * 20
+     var ye = pageNum * 18
     var http = mm("do_Http");
 	http.method = "POST";  // GET | POST
 	http.timeout = 30000; // 超时时间 : 单位 毫秒
@@ -68,7 +68,7 @@ function getdata(){
 //刷新数据
 function getNextPageData(){
 	pageNum++;
-	var ye = pageNum * 20
+	var ye = pageNum * 18
 	var http = mm("do_Http");
 	http.method = "POST";  // GET | POST
 	http.timeout = 30000; // 超时时间 : 单位 毫秒
