@@ -1,0 +1,20 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"id":"root_layout",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"templates":"source://view/index.ui,source://view/celan/ce_index.ui",
+				"width":"750",
+				"supportGesture":"left",
+				"id":"do_FragmentView_1",
+				"type":"do_FragmentView",
+				"height":"1332"
+			}
+		],
+		"height":"1334"
+	}
+}

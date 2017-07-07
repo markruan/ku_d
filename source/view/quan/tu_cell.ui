@@ -1,0 +1,28 @@
+{
+	"RootView":{
+		"width":"238",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"width":"230",
+				"id":"do_ALayout_1",
+				"type":"do_ALayout",
+				"views":[
+					{
+						"border":"00000000,0,[8,8,8,8]",
+						"x":"8",
+						"width":"215",
+						"y":"8",
+						"id":"tupian",
+						"type":"do_ImageView",
+						"cacheType":"always",
+						"height":"215",
+						"animation":"fade"
+					}
+				],
+				"height":"230"
+			}
+		],
+		"height":"233"
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"RootView":{
+		"border":"00000000,0,[10,10,10,10]",
+		"bgColor":"00000000",
+		"width":"750",
+		"id":"do_ALayout",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"bgColor":"FFFFFFFF",
+				"width":"750",
+				"id":"do_ALayout_1",
+				"type":"do_ALayout",
+				"views":[
+					{
+						"width":"200",
+						"x":"292",
+						"y":"476",
+						"id":"loading",
+						"type":"do_FrameAnimationView",
+						"height":"160"
+					}
+				],
+				"height":"1334"
+			}
+		],
+		"height":"1334"
+	}
+}

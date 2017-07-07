@@ -1,0 +1,35 @@
+{
+	"RootView":{
+		"bgColor":"00000000",
+		"width":"380",
+		"id":"do_ALayout_root",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"border":"FFFFFFFF,1,[8,8,8,8]",
+				"width":"360",
+				"x":"10",
+				"y":"20",
+				"id":"do_ImageView_icon",
+				"type":"do_ImageView",
+				"cacheType":"always",
+				"defaultImage":"source://image/loading.gif",
+				"height":"200",
+				"animation":"fade"
+			},
+			{
+				"textAlign":"center",
+				"x":"8",
+				"width":"226",
+				"y":"246",
+				"maxLines":"2",
+				"fontSize":"18",
+				"id":"do_Label_title",
+				"type":"do_Label",
+				"fontColor":"555555FF",
+				"height":"52"
+			}
+		],
+		"height":"240"
+	}
+}
