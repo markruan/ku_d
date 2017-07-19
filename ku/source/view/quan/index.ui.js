@@ -1,6 +1,6 @@
 /**
  * related to index.ui
- * 
+ *
  * @Author : markruan@qq.com
  * @Timestamp : 2017-06-15
  */
@@ -12,16 +12,14 @@ var fn = sm("do_Notification");
 //创建一个ListData集合对象；
 var listData = mm("do_ListData");
 var page
- 
+
 do_Page.on("loaded", function(){
-	//读取当前页面的传入参数
-//	rootlay.add("loadingUI2", "source://view/loadingUI2.ui", 0, 47);
-//	loadingUI2 = ui("loadingUI2");
+ 
 	getinfo()
-	 
- 
+
+
 })
- 
+
 function getinfo(){
 //	http
 	page=0
@@ -34,7 +32,7 @@ function getinfo(){
 	http.url = musicUrl; // 请求的 URL
 // 	http.body = JSON.stringify({id:type_id, page:pageNum}); // 传入新闻类型ID和页码的参数
 	http.on("success", function(data) {
-		 
+
 	for (var i = 0; i < data.length; i++) {
 		if(data[i].type==0){
 			data[i].template=1
@@ -42,21 +40,21 @@ function getinfo(){
 			data[i].template=0
 			var pi=[]
 			var imgdata=[]
-		 
+
 		    if(data[i].tushu>0){
 		    	   var piccdata=JSON.parse(data[i].cover)
 			   for (var j = 0; j < piccdata.length; j++) {
 					 var aa={}
-				  
+
 					 aa.tupian=piccdata[j][0]
-					
+
 					 aa.imgdata=piccdata
 					 aa.index=j
 					 pi[j]=aa
-					  
+
 				}
 				data[i].picc=pi
-				
+
 		   }else{
 			   var aa={}
 			   aa.tupian=data[i].cover
@@ -65,31 +63,31 @@ function getinfo(){
 			   pi[0]=aa
 			   data[i].picc=pi
 		   }
-			
+
 			d1.print(JSON.stringify(data))
-			
-       }	
+
+       }
 	}
 	   listData.removeAll()
 // 	    d1.print(JSON.stringify(data))
 		listData.addData(data);
 		do_ListView_1.bindItems(listData)
-	    do_ListView_1.rebound(); 
-		 
+	    do_ListView_1.rebound();
+
 	});
 	http.on("fail", function(data) {
 		//去掉遮盖
 		nf.toast(data.message)
-	 
- 
+
+
      nf.toast("网络故障"); //比具体的错误提示更容易懂
      deviceone.print(data)
-      
+
 	});
 	http.request();
-	
-	
-	
+
+
+
 }
 
 function getNextPageData(){
@@ -109,7 +107,7 @@ function getNextPageData(){
 			 }else{
 				data[i].template=0
 				var pi=[]
-			 
+
 			    if(data[i].tushu>0){
 			    	   var piccdata=JSON.parse(data[i].cover)
 				   for (var j = 0; j < piccdata.length; j++) {
@@ -119,7 +117,7 @@ function getNextPageData(){
 						 aa.index=j
 						 pi[j]=aa
 					}
-					data[i].picc=pi 
+					data[i].picc=pi
 			   }else{
 				   var aa={}
 				   aa.tupian=data[i].cover
@@ -128,21 +126,21 @@ function getNextPageData(){
 				   pi[0]=aa
 				   data[i].picc=pi
 			   }
-				
-		 
-				
-	       }	
+
+
+
+	       }
 		}
 		if(data.length<10){
 			fn.toast("没有更多了")
-		  } 
-		do_ListView_1.rebound(); 
+		  }
+		do_ListView_1.rebound();
 		listData.addData(data);
 		do_ListView_1.bindItems(listData)
-		do_ListView_1.rebound();   
-			  
-		  
-		
+		do_ListView_1.rebound();
+
+
+
 	});
 	http.on("fail", function(data) {
 		//恢复do_ListView_news的headerview和footerview
@@ -156,9 +154,9 @@ function getNextPageData(){
 var rootlay=ui("do_ListView_1")
 //上拉列表，翻页数据
 rootlay.on("push", function(data){
-	  
+
  	//其中state=0：表示开始上推headerview，；state=1：表示上推headerview超过headerview的高度，触发一次这个事件；state=2：上推超过一定值，触发state=1事件后，松手会触发一次这个事件，数据加载完后需要调用rebound方法让header复位
- 	if (data.offset>5){		
+ 	if (data.offset>5){
  		getNextPageData();
  	}
  });
@@ -169,5 +167,4 @@ rootlay.on("pull", function(data){
 	if (data.state == 2){
 		getinfo()
 	}
-});	
-
+});
