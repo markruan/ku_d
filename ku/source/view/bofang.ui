@@ -44,7 +44,7 @@
 				"height":"128"
 			},
 			{
-				"border":"EB6788FF,2,[300,300,300,300]",
+				"border":"EB678830,10,[300,300,300,300]",
 				"bgColor":"00000000",
 				"x":"72",
 				"width":"600",
@@ -70,15 +70,6 @@
 				"y":"976",
 				"id":"do_ImageView_10",
 				"source":"source://image/shoucang.png",
-				"type":"do_ImageView",
-				"height":"40"
-			},
-			{
-				"x":"345",
-				"width":"40",
-				"y":"976",
-				"id":"do_ImageView_11",
-				"source":"source://image/fenxiang.png",
 				"type":"do_ImageView",
 				"height":"40"
 			},
@@ -219,7 +210,7 @@
 			{
 				"x":"192",
 				"y":"1124",
-				"id":"do_ALayout_7",
+				"id":"prev_btn",
 				"type":"do_ALayout",
 				"views":[
 					{
@@ -324,6 +315,23 @@
 				"type":"do_Label",
 				"fontColor":"FACACACF",
 				"height":"40"
+			},
+			{
+				"x":"318",
+				"y":"962",
+				"id":"wx_share_btn",
+				"type":"do_ALayout",
+				"views":[
+					{
+						"width":"40",
+						"x":"31",
+						"y":"16",
+						"id":"do_ImageView_11",
+						"source":"source://image/fenxiang.png",
+						"type":"do_ImageView",
+						"height":"40"
+					}
+				]
 			}
 		],
 		"height":"1334"

@@ -216,6 +216,7 @@
 						"x":"352",
 						"y":"574",
 						"fontSize":"30",
+						"inputType":"ASC",
 						"id":"username",
 						"type":"do_TextField",
 						"fontColor":"E1E1E1FF",
@@ -230,7 +231,8 @@
 						"y":"748",
 						"fontSize":"30",
 						"id":"psw",
-						"type":"do_TextField"
+						"type":"do_TextField",
+						"fontColor":"FFFFFFFF"
 					}
 				],
 				"height":"1334"

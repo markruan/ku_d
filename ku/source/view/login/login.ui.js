@@ -34,16 +34,18 @@ submit.on("touch",function(data) {
 		 
 	 }else{
 		 var info="?username="+username.text+"&password="+psw.text
+		 
 //			http
-			var musicUrl = 'http://v7idc.com/ku/api/login.php'+info;
+			var musicUrl = 'http://v7idc.com/ku/api/loginget.php'+info;
+		   
 			var http = mm("do_Http");
 			http.method = "POST";  // GET | POST
 			http.timeout = 30000; // 超时时间 : 单位 毫秒
 			http.contentType =  "application/json"; // Content-Type
 			http.url = musicUrl // 请求的 URL
-// 			http.body = JSON.stringify({username:username.text,password:psw.text}); // 传入参数
+     		http.body = JSON.stringify({username:username.text,password:psw.text}); // 传入参数
 			http.on("success", function(data) {
-				 
+				  
 				if(data.status==1){
 					nf.toast(data.msg)
 					do_Storage.writeFile("data://userinfo.txt",JSON.stringify(data.userdata),function(data,e) {
@@ -61,11 +63,11 @@ submit.on("touch",function(data) {
 			});
 			http.on("fail", function(data) {
 				//去掉遮盖
-				loadingUI.visible = false;
+//				loadingUI.visible = false;
 			    //恢复do_ListView_news的headerview和footerview
-				do_ListView_news.rebound();
-				//do_Notification.toast(data);
-		     nf.toast("网络故障"); //比具体的错误提示更容易懂
+				 
+				nf.toast(data);
+//		     nf.toast("网络故障"); //比具体的错误提示更容易懂
 			});
 			http.request();
 		 

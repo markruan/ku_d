@@ -7,12 +7,13 @@
 		"type":"do_ALayout",
 		"views":[
 			{
-				"bgColor":"FFFFFFFF",
+				"bgColor":"00000000",
 				"width":"750",
 				"id":"do_ALayout_1",
 				"type":"do_ALayout",
 				"views":[
 					{
+						"bgColor":"66666640",
 						"width":"200",
 						"x":"275",
 						"y":"476",

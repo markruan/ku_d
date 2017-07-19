@@ -9,7 +9,7 @@ var d1 = require("deviceone");
 var do_Page = sm("do_Page");
 var do_App = sm("do_App");
 var root_layout=ui("index_layout")
-var do_Notification = sm("do_Notification");
+var nf = sm("do_Notification");
 var open_kong=ui("open_kong")
 var menu=ui("menu")
 var tab1=ui("tab1")
@@ -73,3 +73,31 @@ menu.on("touch",function() {
 	 
 	
 })
+// title1 切换
+
+tab1.on("touch",function() {
+     
+	if(slideView.index==0){
+		    
+		}else{
+			slideView.index=0
+			 
+			
+		}
+	 
+	
+})
+tab2.on("touch",function() {
+     
+	if(slideView.index==0){
+		   slideView.index=1
+		  
+		}else{
+			slideView.index=0
+			 
+			
+		}
+	 
+	
+})
+ 

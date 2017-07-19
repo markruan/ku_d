@@ -1,3 +1,4 @@
+
 {
 	"RootView":{
 		"width":"750",
@@ -21,6 +22,7 @@
 								"bgColor":"00000000",
 								"templates":"source://view/newsShowTemplate.ui",
 								"width":"750",
+								"isAllCache":"true",
 								"id":"do_SlideView_1",
 								"type":"do_SlideView",
 								"height":"341"

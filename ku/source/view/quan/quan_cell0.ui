@@ -1,100 +1,129 @@
 {
 	"RootView":{
+		"bgColor":"FFFFFFFF",
 		"x":"0",
 		"width":"750",
 		"y":"0",
 		"type":"do_ALayout",
 		"views":[
 			{
-				"bgColor":"FFFFFFFF",
-				"x":"2",
+				"margin":"0,0,10,0",
+				"bgColor":"00000000",
 				"width":"750",
-				"y":"1",
-				"id":"do_ALayout_1",
-				"type":"do_ALayout",
+				"id":"do_LinearLayout_2",
+				"type":"do_LinearLayout",
 				"views":[
 					{
-						"x":"35",
-						"width":"120",
-						"y":"20",
-						"id":"do_ALayout_2",
+						"width":"750",
+						"id":"do_ALayout_10",
 						"type":"do_ALayout",
 						"views":[
 							{
-								"border":"00000000,0,[50,50,50,50]",
-								"x":"10",
-								"y":"10",
-								"id":"icon",
-								"source":"source://image/www.gif",
-								"type":"do_ImageView",
-								"height":"100"
-							}
-						],
-						"height":"120"
-					},
-					{
-						"x":"202",
-						"width":"354",
-						"y":"50",
-						"id":"do_ALayout_3",
-						"type":"do_ALayout",
-						"views":[
-							{
-								"x":"2",
-								"width":"300",
-								"y":"2",
-								"fontSize":"25",
-								"id":"username",
-								"text":"歌曲",
-								"type":"do_Label",
-								"height":"25"
+								"width":"120",
+								"x":"32",
+								"y":"13",
+								"id":"do_ALayout_2",
+								"type":"do_ALayout",
+								"views":[
+									{
+										"border":"00000000,0,[50,50,50,50]",
+										"x":"10",
+										"y":"10",
+										"id":"icon",
+										"source":"source://image/www.gif",
+										"type":"do_ImageView",
+										"cacheType":"always",
+										"height":"100",
+										"animation":"fade"
+									}
+								],
+								"height":"120"
 							},
 							{
-								"x":"2",
-								"width":"300",
-								"y":"39",
-								"fontSize":"23",
-								"id":"qianming",
-								"text":"歌手",
-								"type":"do_Label",
-								"fontColor":"7F7F7FFF",
-								"height":"25"
+								"width":"354",
+								"x":"196",
+								"y":"17",
+								"id":"do_ALayout_3",
+								"type":"do_ALayout",
+								"views":[
+									{
+										"x":"2",
+										"width":"300",
+										"y":"2",
+										"fontSize":"25",
+										"id":"username",
+										"text":"歌曲",
+										"type":"do_Label",
+										"height":"30"
+									},
+									{
+										"x":"-1",
+										"width":"355",
+										"y":"49",
+										"fontSize":"20",
+										"id":"qianming",
+										"text":"歌手",
+										"type":"do_Label",
+										"fontColor":"7F7F7FFF",
+										"height":"25"
+									}
+								],
+								"height":"77"
+							},
+							{
+								"width":"140",
+								"x":"592",
+								"y":"12",
+								"id":"do_ALayout_4",
+								"type":"do_ALayout",
+								"views":[
+									{
+										"x":"20",
+										"y":"24",
+										"id":"do_ImageView_2",
+										"source":"source://image/guanzhu.png",
+										"type":"do_ImageView",
+										"height":"50"
+									}
+								],
+								"height":"90"
 							}
 						],
-						"height":"65"
+						"height":"155"
 					},
 					{
-						"x":"594",
-						"width":"140",
-						"y":"25",
-						"id":"do_ALayout_4",
+						"margin":"0,0,30,30",
+						"templates":"source://view/quan/tu_cell.ui",
+						"width":"700",
+						"x":"30",
+						"y":"155",
+						"id":"tulist",
+						"type":"do_GridView",
+						"numColumns":"3",
+						"height":"-1"
+					},
+					{
+						"margin":"5,0,5,30",
+						"width":"700",
+						"x":"30",
+						"y":"189",
+						"id":"do_ALayout_14",
 						"type":"do_ALayout",
 						"views":[
 							{
-								"x":"20",
-								"y":"24",
-								"id":"do_ImageView_2",
-								"source":"source://image/guanzhu.png",
-								"type":"do_ImageView",
-								"height":"50"
+								"width":"700",
+								"id":"vtext",
+								"type":"do_Label",
+								"height":"-1"
 							}
 						],
-						"height":"90"
+						"height":"-1"
 					},
 					{
-						"templates":"source://view/quan/tu_cell.ui",
-						"x":"30",
+						"margin":"0,0,10,30",
 						"width":"700",
-						"y":"155",
-						"id":"tu_list",
-						"type":"do_GridView",
-						"numColumns":"3",
-						"height":"230"
-					},
-					{
-						"x":"32",
-						"width":"696",
-						"y":"407",
+						"x":"30",
+						"y":"193",
 						"id":"do_ALayout_5",
 						"type":"do_ALayout",
 						"views":[
@@ -151,11 +180,20 @@
 							}
 						],
 						"height":"40"
+					},
+					{
+						"bgColor":"CCCCCCFF",
+						"width":"750",
+						"y":"243",
+						"id":"do_ALayout_13",
+						"type":"do_ALayout",
+						"views":[],
+						"height":"10"
 					}
 				],
-				"height":"465"
+				"height":"-1"
 			}
 		],
-		"height":"475"
+		"height":"-1"
 	}
 }

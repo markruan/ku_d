@@ -3,6 +3,7 @@
 		"x":"0",
 		"width":"750",
 		"y":"0",
+		"id":"rootlay",
 		"type":"do_ALayout",
 		"views":[
 			{
@@ -11,18 +12,20 @@
 				"type":"do_ALayout",
 				"views":[
 					{
-						"templates":"source://view/quan/quan_cell0.ui",
+						"isHeaderVisible":"true",
+						"isFooterVisible":"true",
+						"templates":"source://view/quan/quan_cell0.ui,source://view/quan/quan_cell1.ui",
 						"x":"2",
 						"width":"746",
 						"y":"2",
 						"id":"do_ListView_1",
 						"type":"do_ListView",
-						"height":"1136"
+						"height":"-1"
 					}
 				],
-				"height":"1138"
+				"height":"-1"
 			}
 		],
-		"height":"1334"
+		"height":"-1"
 	}
 }

@@ -15,6 +15,7 @@ var nickname=ui('nickname')
 var nf = sm("do_Notification");
 var songlist=ui('songlist')
 var datalist=mm('do_ListData')
+var do_DataCache=sm("do_DataCache")
 //在do_ALayout_root上动态添加子视图(用于等待数据装载的过程)
 do_ALayout_root.add("loadingUI", "source://view/loadingUI.ui", 0, 129);
 var loadingUI = ui("loadingUI");
@@ -32,8 +33,27 @@ do_ALayout_back.on("touch", function(){
 do_Page.on("loaded", function(){
 	//读取当前页面的传入参数
 	var para=do_Page.getData();
-	 
+	var listid=para.listid;
 	do_ALayout_root.tag = para.listid;
+	 
+	if(do_DataCache.hasData(listid)){
+		
+		var listdata=do_DataCache.loadData(listid)
+		do_cover.source=listdata.coverImgUrl
+		avatarUrl.source=listdata.creator.avatarUrl
+		list_title.text=listdata.name
+		nickname.text=listdata.creator.nickname
+		
+		var listdata=do_DataCache.loadData(listid)
+ 
+		datalist.addData(listdata.tracks)
+		songlist.bindItems(datalist)
+		var  listvalue=JSON.stringify(listdata.tracks)
+		do_Global.setMemory("songlist", listvalue)
+		loadingUI.visible = false; 
+		return
+	}
+	
 	 
 	
 //	http
@@ -48,21 +68,32 @@ do_Page.on("loaded", function(){
 	http.on("success", function(data) {
 		//恢复do_ListView_news的headerview和footerview状态
 //		do_ListView.rebound(); 
-		var songlist1=data.result.tracks
+		var songlist1=data.result
 		 
-		for (var i = 0; i< songlist1.length; i++) {
-			songlist1[i].index=i+1
+		var songlist2=data.result.tracks
+		 
+		 
+		for (var i = 0; i< songlist2.length; i++) {
+			songlist1.tracks[i].index=i+1
 		 }
 //		 nf.alert(JSON.stringify(songlist1[1]))
 		do_cover.source=data.result.coverImgUrl
 		avatarUrl.source=data.result.creator.avatarUrl
 		list_title.text=data.result.name
 		nickname.text=data.result.creator.nickname
-		datalist.addData(songlist1)
-		songlist.bindItems(datalist)
-		 var  listvalue=JSON.stringify(songlist1)
-		do_Global.setMemory("songlist", listvalue)
-		loadingUI.visible = false;
+		
+		 
+		if(!do_DataCache.hasData(listid)){
+			 
+			datalist.addData(songlist1.tracks)
+			songlist.bindItems(datalist)
+			var  listvalue=JSON.stringify(songlist1.tracks)
+			do_Global.setMemory("songlist", listvalue)
+			loadingUI.visible = false; 
+			
+		}
+		do_DataCache.saveData(listid,songlist1)
+//		loadingUI.visible = false; 
 		
 		 
 	});

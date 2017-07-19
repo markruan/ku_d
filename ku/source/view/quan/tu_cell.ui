@@ -1,6 +1,7 @@
 {
 	"RootView":{
 		"width":"238",
+		"id":"imgbtn",
 		"type":"do_ALayout",
 		"views":[
 			{
