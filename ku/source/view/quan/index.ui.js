@@ -14,11 +14,8 @@ var listData = mm("do_ListData");
 var page
 
 do_Page.on("loaded", function(){
-
-
-	getinfo()
-
-
+ getinfo()
+ 
 })
 
 function getinfo(){
