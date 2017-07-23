@@ -68,7 +68,7 @@
 						"x":"514",
 						"width":"122",
 						"y":"20",
-						"id":"do_ALayout_10",
+						"id":"searchbtn",
 						"bgImage":"source://image/touming.png",
 						"tag":"0",
 						"type":"do_ALayout",

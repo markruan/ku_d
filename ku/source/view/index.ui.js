@@ -126,3 +126,14 @@ playtouch.on("touch",function(d){
 	    	playbtn.source="source://image/play.png"
 	    }
 })
+//搜索按钮
+var searchbtn=ui("searchbtn")
+searchbtn.on("touch",function(d){
+	do_App.openPage({
+		source:"source://view/sou/sou_index.ui", 
+		keyboardMode:"visible",
+		animationType:"fade", //动画效果：从右向左推出
+		statusBarState:"transparent",
+//		data:JSON.stringify({title:do_Label_title.text, listid:listid}) //传递页面之间的参数
+	});
+})
