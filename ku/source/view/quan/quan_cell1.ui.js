@@ -43,6 +43,7 @@ songnametouch.on("touch", function(){
 		 play.player(mp3)
 		 bobtn.tag=0
 		 nf.toast("播放")
+		 do_App.fire("message1",JSON.stringify({songname:songname.text,artist:artistt.text}))
  }else{
 	     bobtn.source="source://image/bo.png" 
 		 play.stop()

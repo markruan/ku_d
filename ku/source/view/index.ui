@@ -171,7 +171,7 @@
 						"width":"230",
 						"y":"28",
 						"fontSize":"18",
-						"id":"do_Label_3",
+						"id":"songname",
 						"text":"see  you again",
 						"type":"do_Label",
 						"height":"52"
@@ -199,14 +199,15 @@
 						"x":"350",
 						"width":"70",
 						"y":"25",
-						"id":"do_ALayout_6",
+						"id":"playtouch",
+						"tag":"1",
 						"type":"do_ALayout",
 						"views":[
 							{
 								"x":"20",
 								"width":"28",
 								"y":"12",
-								"id":"do_ImageView_6",
+								"id":"playbtn",
 								"source":"source://image/play.png",
 								"type":"do_ImageView",
 								"height":"40"

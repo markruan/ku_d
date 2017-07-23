@@ -49,3 +49,11 @@ module.exports.stop = function(sid){
 	 play.stop()
  
 }
+module.exports.resume = function(sid){
+	 play.resume()
+
+}
+module.exports.pause = function(sid){
+	 play.pause()
+
+}

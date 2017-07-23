@@ -58,6 +58,7 @@ play_bg.on("touch", function() {
 		playicon.tag="-1"	
 //			暂停旋转
 		bgimg.animate(label_anima1);
+		
 	 
 		
 	}else{
@@ -92,8 +93,7 @@ do_Page.on("loaded", function(){
 	bgimg.source=para.bgimg
 	artist.text=para.artist
 	artist.tag=para.index
-//	play_prv.tag=para.index
-//	play(songname.tag)
+	do_App.fire("message1",JSON.stringify({songname:songname.text,artist:artist.text}))
 	playjs.player(songname.tag)
 	bgimg.animate(label_anima); 
 	loadingUI2.visible = false;
@@ -357,7 +357,7 @@ function shoucang() {
 	nf.toast(data.message)
 	 
      nf.toast("网络故障"); //比具体的错误提示更容易懂
-     deviceone.print(data)
+//     deviceone.print(data)
       
 	});
 	http.request();

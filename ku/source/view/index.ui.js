@@ -18,6 +18,10 @@ var line1=ui("line1")
 var line2=ui("line2")
 var title1=ui("title1")
 var title2=ui("title2")
+var songname=ui("songname")
+ var play=require("play");
+var playbtn=ui("playbtn")
+var playtouch=ui("playtouch")
 
 //根据ID获取SlideView实例对象；
 var slideView = ui("do_SlideView_3");
@@ -97,7 +101,28 @@ tab2.on("touch",function() {
 			 
 			
 		}
-	 
-	
+ 	
 })
- 
+
+//# message1圈子页面音乐播放监听
+do_App.on("message1",function(d){
+    songname.text=d.songname+"-"+d.artist
+    
+    	playbtn.source="source://image/zanting.png"
+    	playtouch.tag=0
+    
+});
+
+playtouch.on("touch",function(d){
+//	nf.alert(playtouch.tag)
+	 if(playtouch.tag==1){
+	    	playbtn.source="source://image/zanting.png"
+	    	playtouch.tag=0
+	    	play.resume()
+	    }else{
+	    	playtouch.tag=1
+	    	play.pause()
+	    	 
+	    	playbtn.source="source://image/play.png"
+	    }
+})
