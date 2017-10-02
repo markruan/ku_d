@@ -12,13 +12,15 @@
 	"asyncMethodes":[
 		{
 			"ReturnType_JavaScript":"String",
-			"Description":"",
+			"Description":"如果是sourceType参数为file类型的话，type参数为encode时source参数应为文件路径，回调结果是文件内容加密后的源数据；type参数为decode时source参数应为源数据，回调结果是文件路径（为一个data://temp/随机名字的文件，文件内容为解密后的数据）",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"encode",
 					"Type":"String",
 					"Description":"目前支持两种类型，'encode'为编码、'decode'为解码",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"type",
 					"Name":"base64类型"
@@ -26,8 +28,9 @@
 				{
 					"DefaultValue":"string",
 					"Type":"String",
-					"Description":"支持两种'string':字符串类型、 'file'：文件类型,如果是file类型的话，encode是把一个file读出内容编码为base64字符串，如果是decode的时候是把一个base64字符串解码为一个data://temp/随机名字的文件",
+					"Description":"支持两种'string':字符串类型、 'file'：文件类型",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"sourceType",
 					"Name":"需要base64的数据类型"
@@ -37,6 +40,7 @@
 					"Type":"String",
 					"Description":"",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"source",
 					"Name":"需要base64的源数据"
@@ -50,12 +54,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"",
 					"Type":"String",
 					"Description":"3DES算法的key值",
 					"Required":1,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"key",
 					"Name":"des3秘钥"
@@ -65,6 +71,7 @@
 					"Type":"String",
 					"Description":"目前支持两种类型，'encrypt'为加密、'decrypt'为解密",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"type",
 					"Name":"des3类型"
@@ -74,6 +81,7 @@
 					"Type":"String",
 					"Description":"",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"source",
 					"Name":"需要des3的源数据"
@@ -87,12 +95,14 @@
 		{
 			"ReturnType_JavaScript":"Bool",
 			"Description":"把十六进制数据转换成二进制并保存成文件放在指定目录下",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"",
 					"Type":"String",
 					"Description":"用十六进制字符串表示的数据",
 					"Required":1,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"source",
 					"Name":"十六进制数据"
@@ -102,6 +112,7 @@
 					"Type":"String",
 					"Description":"要保存的二进制文件全路径,支持data://",
 					"Required":1,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"path",
 					"Name":"目标路径"
@@ -115,12 +126,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"把十六进制数据按特定编码格式转成字符串",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"",
 					"Type":"String",
 					"Description":"用十六进制字符串表示的数据",
 					"Required":1,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"source",
 					"Name":"十六进制数据"
@@ -130,6 +143,7 @@
 					"Type":"String",
 					"Description":"指定编码格式，默认使用utf-8格式",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"encoding",
 					"Name":"编码格式"
@@ -143,12 +157,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"string",
 					"Type":"String",
 					"Description":"目前支持两种类型，'string'为字符串类型、'file'为文件类型",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"type",
 					"Name":"需要md5的数据类型"
@@ -158,6 +174,7 @@
 					"Type":"String",
 					"Description":"如果type为'string'类型，是一个字符串的值；如果为'file'类型，这就是一个文件的路径，只支持data://数据区目录",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"value",
 					"Name":"需要md5的数据值"
@@ -171,12 +188,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"主要适用于数字签名标准",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"lowercase",
 					"Type":"String",
 					"Description":"目前支持两种类型，'uppercase'为加密后返回大写字母、'lowercase'为加密后返回小写字母",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"type",
 					"Name":"需要SHA1的数据类型"
@@ -186,6 +205,7 @@
 					"Type":"String",
 					"Description":"",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"value",
 					"Name":"需要SHA1的数据值"
@@ -199,12 +219,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"把xml格式转换成标准Json格式",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"",
 					"Type":"String",
 					"Description":"",
 					"Required":1,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"source",
 					"Name":"xml格式数据"
@@ -230,12 +252,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"同步的Base64算法，只支持字符串的处理",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"encode",
 					"Type":"String",
 					"Description":"目前支持两种类型，'encode'为编码、'decode'为解码",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"type",
 					"Name":"base64类型"
@@ -245,6 +269,7 @@
 					"Type":"String",
 					"Description":"",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"source",
 					"Name":"需要base64的源数据"
@@ -258,12 +283,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"windows平台不支持",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"",
 					"Type":"String",
 					"Description":"3DES算法的key值，不支持小于24位",
 					"Required":1,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"key",
 					"Name":"des3秘钥"
@@ -273,6 +300,7 @@
 					"Type":"String",
 					"Description":"目前支持两种类型，'encrypt'为加密、'decrypt'为解密",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"type",
 					"Name":"des3类型"
@@ -282,6 +310,7 @@
 					"Type":"String",
 					"Description":"",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"source",
 					"Name":"需要des3的源数据"
@@ -295,12 +324,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"同步md5算法，只支持字符串的处理",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"",
 					"Type":"String",
 					"Description":"",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"value",
 					"Name":"需要md5的数据值"
@@ -314,12 +345,14 @@
 		{
 			"ReturnType_JavaScript":"String",
 			"Description":"主要适用于数字签名标准",
+			"Deprecated":false,
 			"Paras":[
 				{
 					"DefaultValue":"lowercase",
 					"Type":"String",
 					"Description":"目前支持两种类型，'uppercase'为加密后返回大写字母、'lowercase'为加密后返回小写字母",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"type",
 					"Name":"需要SHA1的数据类型"
@@ -329,6 +362,7 @@
 					"Type":"String",
 					"Description":"",
 					"Required":0,
+					"Deprecated":false,
 					"Type_JavaScript":"String",
 					"ID":"value",
 					"Name":"需要SHA1的数据值"
@@ -346,7 +380,7 @@
 	"Events":[],
 	"UIType":"Layout",
 	"ID":"do_Algorithm",
-	"Icon":"https://do-store.oss-cn-beijing.aliyuncs.com/D/20160121/do_Algorithm/算法.jpg",
+	"Icon":"https://deviceone.blob.core.chinacloudapi.cn/component/D/20160121/do_Algorithm/算法.jpg",
 	"IsContainer":"0",
 	"WindowsPhone":{
 		"MinVersion":"10",

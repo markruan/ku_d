@@ -28,7 +28,7 @@ searchb.on("touch", function(){
 	search()
 });
 
-var data=[{"name":"124","artists":[{name:"456"}]}]
+var data=[{"name":"历史","artists":[{name:"测试"}]}]
 	datalist.addData(data);
 	do_ListView.bindItems(datalist)
 	
@@ -71,7 +71,7 @@ function search() {
 	
 }	
 	key.on("focusIn",function(){
-//		key.setFocus()
+//		key.hint=""
 	})
 	key.on("enter",function(){
 		search()

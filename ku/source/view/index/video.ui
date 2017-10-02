@@ -1,0 +1,32 @@
+{
+	"RootView":{
+		"x":"0",
+		"width":"750",
+		"y":"0",
+		"id":"v",
+		"type":"do_ALayout",
+		"views":[
+			{
+				"width":"750",
+				"id":"do_VideoView_1",
+				"type":"do_VideoView",
+				"height":"452"
+			},
+			{
+				"x":"14",
+				"width":"432",
+				"y":"460",
+				"id":"songname",
+				"type":"do_Label"
+			},
+			{
+				"x":"16",
+				"width":"432",
+				"y":"556",
+				"id":"artistName",
+				"type":"do_Label"
+			}
+		],
+		"height":"1334"
+	}
+}

@@ -9,8 +9,8 @@
 		"type":"do_ALayout",
 		"views":[
 			{
-				"x":"25",
-				"width":"404",
+				"x":"63",
+				"width":"366",
 				"y":"10",
 				"fontSize":"30",
 				"id":"songname",
@@ -36,8 +36,16 @@
 				"text":"-",
 				"type":"do_Label",
 				"height":"40"
+			},
+			{
+				"bgColor":"CCCCCC40",
+				"width":"750",
+				"y":"68",
+				"id":"do_ALayout_1",
+				"type":"do_ALayout",
+				"height":"2"
 			}
 		],
-		"height":"60"
+		"height":"70"
 	}
 }

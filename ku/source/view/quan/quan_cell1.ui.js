@@ -37,7 +37,8 @@ root.setMapping({
 songnametouch.on("touch", function(){
 	
  var mp3=songname.tag
-
+ 
+ 
  if(bobtn.tag==1){
 	 bobtn.source="source://image/zan2.png" 
 		 play.player(mp3)
@@ -47,7 +48,7 @@ songnametouch.on("touch", function(){
  }else{
 	     bobtn.source="source://image/bo.png" 
 		 play.stop()
-		 bobtn.tag=1
+		
 		 nf.toast("停止")
  }
  

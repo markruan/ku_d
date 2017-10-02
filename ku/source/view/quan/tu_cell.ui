@@ -17,6 +17,7 @@
 						"id":"tupian",
 						"type":"do_ImageView",
 						"cacheType":"always",
+						"defaultImage":"source://image/loading.gif",
 						"height":"215",
 						"animation":"fade"
 					}

@@ -62,7 +62,7 @@ function getinfo(){
 			   data[i].picc=pi
 		   }
 
-			d1.print(JSON.stringify(data))
+//			d1.print(JSON.stringify(data))
 
        }
 	}
@@ -129,7 +129,7 @@ function getNextPageData(){
 
 	       }
 		}
-		if(data.length<10){
+		if(!data.length){
 			fn.toast("没有更多了")
 		  }
 		do_ListView_1.rebound();

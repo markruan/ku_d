@@ -295,15 +295,15 @@
 			},
 			{
 				"visible":"false",
-				"bgColor":"CCCCCCFF",
+				"bgColor":"00000000",
 				"secondaryProgress":"0",
 				"x":"128",
 				"width":"492",
-				"y":"1062",
+				"y":"1024",
 				"progress":"0",
 				"id":"do_SeekBar_1",
 				"type":"do_SeekBar",
-				"height":"5"
+				"height":"63"
 			},
 			{
 				"textAlign":"center",

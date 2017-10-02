@@ -7,7 +7,6 @@
 			{
 				"isHeaderVisible":"true",
 				"isShowbar":"true",
-				"isFooterVisible":"true",
 				"width":"750",
 				"id":"do_ScrollView_1",
 				"type":"do_ScrollView",
@@ -27,24 +26,118 @@
 								"height":"341"
 							},
 							{
-								"bgColor":"00000000",
+								"bgColor":"FFFFFFFF",
+								"width":"750",
+								"y":"341",
+								"id":"do_ALayout_2",
+								"type":"do_ALayout",
+								"views":[
+									{
+										"bgColor":"FF0000FF",
+										"x":"7",
+										"width":"8",
+										"y":"15",
+										"id":"do_Button_1",
+										"type":"do_Button",
+										"height":"30"
+									},
+									{
+										"x":"25",
+										"y":"15",
+										"fontSize":"25",
+										"id":"do_Label_1",
+										"text":"热门推荐",
+										"type":"do_Label",
+										"height":"30"
+									}
+								],
+								"height":"45"
+							},
+							{
+								"bgColor":"FFFFFFFF",
 								"templates":"source://view/index/list.ui",
 								"width":"746",
-								"y":"341",
+								"y":"386",
 								"id":"do_SegmentView_11",
 								"type":"do_SegmentView",
 								"height":"240"
 							},
 							{
 								"bgColor":"FFFFFFFF",
+								"width":"750",
+								"y":"626",
+								"id":"do_ALayout_3",
+								"type":"do_ALayout",
+								"views":[
+									{
+										"bgColor":"FF0000FF",
+										"x":"7",
+										"width":"8",
+										"y":"10",
+										"id":"do_Button_2",
+										"type":"do_Button",
+										"height":"30"
+									},
+									{
+										"x":"25",
+										"y":"10",
+										"fontSize":"25",
+										"id":"do_Label_2",
+										"text":"最新酷选",
+										"type":"do_Label",
+										"height":"30"
+									}
+								],
+								"height":"45"
+							},
+							{
+								"bgColor":"FFFFFFFF",
 								"isShowbar":"false",
 								"templates":"source://view/list.ui",
 								"width":"743",
-								"y":"581",
+								"y":"671",
 								"canScrollToTop":"false",
 								"id":"do_GridView_1",
 								"type":"do_GridView",
 								"numColumns":"3",
+								"height":"-1"
+							},
+							{
+								"bgColor":"FFFFFFFF",
+								"width":"750",
+								"y":"670",
+								"id":"do_ALayout_5",
+								"type":"do_ALayout",
+								"views":[
+									{
+										"bgColor":"FF0000FF",
+										"x":"7",
+										"width":"8",
+										"y":"10",
+										"id":"do_Button_3",
+										"type":"do_Button",
+										"height":"30"
+									},
+									{
+										"x":"25",
+										"y":"10",
+										"fontSize":"25",
+										"id":"do_Label_3",
+										"text":"最新MV",
+										"type":"do_Label",
+										"height":"30"
+									}
+								],
+								"height":"45"
+							},
+							{
+								"bgColor":"FFFFFFFF",
+								"templates":"source://view/index/mvlist.ui",
+								"width":"750",
+								"y":"715",
+								"id":"do_GridView_2",
+								"type":"do_GridView",
+								"numColumns":"2",
 								"height":"-1"
 							}
 						],

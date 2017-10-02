@@ -136,7 +136,7 @@
 			"Group":"",
 			"Type":"Bool",
 			"EditType":"1",
-			"Description":"为true时可以获取焦点，false的时候无法获取焦点",
+			"Description":"为true时可以获取焦点，false的时候无法获取焦点，仅支持Android平台",
 			"Deprecated":false,
 			"Type_JavaScript":"Bool",
 			"ID":"enabled",

@@ -172,7 +172,7 @@
 						"y":"28",
 						"fontSize":"18",
 						"id":"songname",
-						"text":"see  you again",
+						"text":"新感官世界音乐-XGGSJ",
 						"type":"do_Label",
 						"height":"52"
 					},
@@ -180,7 +180,7 @@
 						"x":"271",
 						"width":"68",
 						"y":"26",
-						"id":"do_ALayout_5",
+						"id":"prv",
 						"type":"do_ALayout",
 						"views":[
 							{
@@ -219,7 +219,8 @@
 						"x":"435",
 						"width":"60",
 						"y":"26",
-						"id":"do_ALayout_8",
+						"id":"next",
+						"tag":"0",
 						"type":"do_ALayout",
 						"views":[
 							{
@@ -237,7 +238,7 @@
 					{
 						"x":"636",
 						"y":"27",
-						"id":"do_ALayout_9",
+						"id":"playListBtn",
 						"type":"do_ALayout",
 						"views":[
 							{

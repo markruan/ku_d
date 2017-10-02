@@ -28,6 +28,7 @@
 								"source":"source://image/www.gif",
 								"type":"do_ImageView",
 								"cacheType":"always",
+								"defaultImage":"source://image/loading.gif",
 								"height":"100",
 								"animation":"fade"
 							}
@@ -158,6 +159,7 @@
 								"type":"do_ImageView",
 								"radius":"8",
 								"cacheType":"always",
+								"defaultImage":"source://image/loading.gif",
 								"height":"134"
 							},
 							{
